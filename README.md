@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Montana Landscaping
+
+**Texas-Built Landscapes. Veteran-Led Precision.**
+
+A modern, high-performance landing page for Montana Landscaping — built with Next.js, Tailwind CSS, and Framer Motion. Designed for speed, mobile responsiveness, and seamless Vercel deployment.
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-FF0050?logo=framer)
+![Node](https://img.shields.io/badge/Node-20+-339933?logo=node.js)
+
+---
+
+## Features
+
+- **Splash Screen** — Full-screen animated logo intro with Framer Motion (fade-in + scale + gold glow). Plays once per page refresh.
+- **Hero Section** — Bold headline, subheadline, and dual CTAs over a charcoal-to-black gradient.
+- **Services Grid** — 6 responsive service cards with scroll-triggered staggered animations.
+- **Authority Section** — Full-width background image with dark overlay, parallax-like effect on desktop, and CTA.
+- **Performance** — `next/image` everywhere, no layout shift, mobile responsive.
+- **Tailwind v4** — CSS-based theme with brand colors (`brandRed`, `brandGold`, `brandCharcoal`, `brandBlack`, `brandLight`).
+
+## Tech Stack
+
+| Technology | Purpose |
+| --- | --- |
+| [Next.js 16](https://nextjs.org) (App Router) | Framework & SSR/SSG |
+| [Tailwind CSS 4](https://tailwindcss.com) | Utility-first styling |
+| [Framer Motion 12](https://www.framer.com/motion/) | Animations |
+| [TypeScript](https://www.typescriptlang.org) | Type safety |
+
+## Project Structure
+
+```
+src/app/
+├── globals.css                 # Tailwind theme & global styles
+├── layout.tsx                  # Root layout with metadata & fonts
+├── page.tsx                    # Home page with splash state control
+└── components/
+    ├── SplashScreen.tsx        # Full-screen animated logo intro
+    ├── Hero.tsx                # Headline, subheadline, CTAs
+    ├── Services.tsx            # 6-card responsive service grid
+    └── AuthoritySection.tsx    # Background image section with overlay
+public/
+├── logo.png                    # Main brand logo (splash screen)
+└── logo2.png                   # Company work showcase (authority section)
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20+
+- npm 9+
+
+### Install & Run
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm start
+```
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is optimized for one-click deployment on [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFeeTheDeveloper%2Fmontana_landscaping-site)
+
+Or connect your GitHub repo directly in the [Vercel Dashboard](https://vercel.com/new) — no additional configuration required.
+
+### Environment
+
+- **Framework Preset:** Next.js (auto-detected)
+- **Build Command:** `next build`
+- **Output Directory:** `.next`
+- **Node.js Version:** 20.x
+
+## Brand Colors
+
+| Token | Hex | Usage |
+| --- | --- | --- |
+| `brand-red` | `#B11226` | Accents, CTA buttons |
+| `brand-gold` | `#CFA23D` | Primary highlights, buttons |
+| `brand-charcoal` | `#1C1C1C` | Backgrounds, cards |
+| `brand-black` | `#000000` | Page background |
+| `brand-light` | `#F5F5F5` | Text, light elements |
+
+## License
+
+Private — Montana Landscaping. All rights reserved.
